@@ -1,0 +1,22 @@
+.SL {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SL li {
+  display: inline-block;
+  margin: 0 .5em;
+}
+
+.SL li:first-child {
+  margin-left: 0;
+}
+
+.SL li:last-child {
+  margin-right: 0;
+}
+
+.SL svg {
+  height: 1.5rem;
+}

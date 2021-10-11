@@ -1,0 +1,21 @@
+.NT {
+  height: 100vh;
+  position: fixed;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--type-title);
+  min-width: 25px;
+}
+
+.NT:before,
+.NT:after {
+  content: '';
+  display: block;
+  width: 1px;
+  flex-grow: 1;
+  background: var(--color-dark);
+  opacity: .1;
+}

@@ -1,0 +1,68 @@
+.ListTimeAlt {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1.5rem 0 0;
+}
+
+.ListTimeAlt li {
+  display: flex;
+}
+
+.ListTimeAlt .content {
+  align-items: center;
+  padding: 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* font-weight: 700; */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color .5s ease-out;
+  user-select: none;
+  font-family: var(--type-title);
+}
+
+.ListTimeAlt .content:hover {
+  color: var(--color-accent);
+}
+
+.ListTimeAlt .content span {
+  cursor: inherit;
+}
+
+.hidden {
+  /* width: 0; */
+  /* overflow: hidden; */
+  pointer-events: none;
+  position: relative;
+  opacity: 0;
+  text-align: left;
+  transition: width ease-out 0.5s .2s, opacity .2s ease-out;
+}
+
+.hidden a {
+  pointer-events: all;
+  /* color: var(--color-accent); */
+}
+
+.hidden > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+:global(.u-isOpen) .hidden {
+  opacity: 1;
+  transition: width ease-out 0.5s, opacity .5s .5s ease-out;
+}
+
+:global(.u-isOpen) .content {
+  cursor: default;
+}
+
+.ListTimeAlt :global(.u-isOpen) .content:hover {
+  color: var(--color-dark);
+}

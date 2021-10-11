@@ -1,0 +1,52 @@
+:root {
+  --type-body: 'Red Hat Display', sans-serif;
+  --type-title: Staatliches, sans-serif;
+  --tracking-body: .05em;
+  --tracking-title: var(--tracking-body);
+  --leading-body: 1.75;
+  --leading-title: 1.25;
+  --font-size-body: 16px;
+}
+
+html,
+body {
+  font-family: var(--type-body);
+  letter-spacing: var(--tracking-body);
+  line-height: var(--leading-body);
+  font-size: var(--font-size-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: var(--type-title);
+  font-size: 128px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--type-title);
+  margin: 0 0 1.5rem;
+  line-height: var(--leading-title);
+  letter-spacing: var(--tracking-title);
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+path {
+  vector-effect: non-scaling-stroke;
+}

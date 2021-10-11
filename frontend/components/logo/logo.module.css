@@ -1,0 +1,11 @@
+.Logo {
+  fill: rgb(55, 70, 70);
+}
+
+.Logo path {
+  transition: fill .5s ease-out;
+}
+
+.Logo:hover path {
+  fill: var(--color-accent);
+}

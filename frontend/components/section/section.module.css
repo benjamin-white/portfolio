@@ -1,0 +1,33 @@
+.Section {
+  width: 100%;
+}
+
+.Section:global(.u-isFull) {
+  min-height: 100vh;
+  padding: 6rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Section:global(.u-isFull) > *:first-child {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Section:global(.u-isFull) > *:last-child {
+  position: relative;
+}
+
+.Section p {
+  max-width: 50%;
+  margin: 0 auto 1.5rem;
+}
+
+.Section p:last-child {
+  margin-bottom: 0;
+}

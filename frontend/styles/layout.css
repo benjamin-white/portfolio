@@ -1,0 +1,14 @@
+:root {
+  --site-padding-x-lg: 1rem;
+}
+
+.u-container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 var(--site-padding-x-lg);
+  width: 100%;
+}
+
+body {
+  overflow-y: scroll;
+}

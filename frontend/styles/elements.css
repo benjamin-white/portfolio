@@ -1,0 +1,64 @@
+.Button {
+
+  backdrop-filter: blur(8px);
+  border: 2px solid var(--color-dark);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--type-title);
+  letter-spacing: var(--tracking-title);
+  line-height: var(--leading-title);
+  padding: .2em .8em;
+  text-transform: uppercase;
+
+}
+
+a {
+  position: relative;
+  transition: color .5s ease-out;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+.u-decorateLinks a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-dark);
+  transform: scaleX(0);
+  opacity: 0;
+  transform-origin: left center;
+  transition: transform .5s ease-out, opacity .5s ease-out, background-color .5s ease-out;
+}
+
+.u-decorateLinks a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--color-dark);
+  transform: scaleX(0);
+  opacity: 0;
+  transform-origin: right center;
+  transition: transform .5s ease-out, opacity .5s ease-out, background-color .5s ease-out;
+}
+
+.u-decorateLinks a:hover:after {
+  transform: scaleX(1);
+  opacity: 1;
+  background: var(--color-accent);
+}
+
+.u-decorateLinks a:hover:before {
+  transform: scaleX(1);
+  opacity: 1;
+  background: var(--color-accent);
+}

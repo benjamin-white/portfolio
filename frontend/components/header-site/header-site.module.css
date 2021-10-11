@@ -1,0 +1,95 @@
+.HeaderSite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  z-index: 99;
+  background: linear-gradient(0deg, transparent, #f8f8f8);
+}
+
+.HeaderSite nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* display: block; */
+  width: 100%;
+}
+
+.HeaderSite nav > a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  width: 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease-out;
+}
+
+.HeaderSite:global(.u-isHome) nav > a {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.HeaderSite nav > a svg {
+  max-height: 1.2em;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(-22px);
+  width: auto;
+  transition: transform .35s ease-out, opacity .35s ease-out;
+}
+
+.HeaderSite nav > a span {
+  transition: opacity .5s ease-out;
+}
+
+.HeaderSite nav > a:hover {
+  color: var(--color-dark);
+}
+
+.HeaderSite nav > a:hover svg {
+  opacity: 1;
+  transform: translateY(-4px);
+  transition: transform .5s ease-out, opacity .5s ease-out;
+}
+
+.HeaderSite nav > a:hover span {
+  opacity: 0;
+}
+
+.HeaderSite nav:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 40px;
+}
+
+.HeaderSite_menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.HeaderSite_menuItem {
+  display: inline-block;
+  padding: 0;
+  margin: 0 1rem;
+  min-width: 70px;
+  text-align: center;
+}
+
+.HeaderSite_menuItem:first-child {
+  margin-left: 0;
+}
+
+.HeaderSite_menuItem:last-child {
+  margin-right: 0;
+}
+
+.HeaderSite_logo {
+  max-height: 2rem;
+}
