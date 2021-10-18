@@ -1,10 +1,12 @@
-import React        from 'react'
-import Layout       from 'components/layout/layout'
-import Seo          from 'components/seo/seo'
-import { fetchAPI } from 'lib/api'
-import Section      from 'components/section/section'
-import NavTracker   from 'components/nav-tracker/nav-tracker'
-import ListTime     from 'components/list-time'
+import React               from 'react'
+import Layout              from 'components/layout/layout'
+import Seo                 from 'components/seo/seo'
+import { fetchAPI }        from 'lib/api'
+import Section             from 'components/section/section'
+import BackgroundProximity from 'components/background-proximity'
+import BGObjectPoints      from 'components/background-object-points'
+import NavTracker          from 'components/nav-tracker/nav-tracker'
+import ListTime            from 'components/list-time'
 
 const PageHome = ({ homepage, global }) => 
   <Layout global={global}>
@@ -18,15 +20,15 @@ const PageHome = ({ homepage, global }) =>
       </div>
     </Section>
     <Section styles={ ['u-isFull'] } id="section_2">
-      <div ariaHidden="true"></div>
-      <div class="u-container" style={{textAlign: 'center'}}>
+      <BGObjectPoints />
+      <div class="u-container" style={{textAlign: 'center', pointerEvents: 'none'}}>
         <h2>Who Am I?</h2>
         <p>Born sometime in the 80s I have simply always enjoyed making things. Finding ways to put things together and conecting them to create new objects is a constant fascination and enjoyment. I'm a bit of a minimalist, like discovering great music and indulging a layman's enjoyment of Physics and Philosophy.</p>
         <p>I work with <strong>PHP</strong>, <strong>Javascript</strong>, <strong>React</strong> and modern cross-browser and responsive SASS or <strong>CSS</strong>. I'm comfortable creating custom Webpack configs, working with RESTful or GraphQL APIs and maintaining Apache, nginx and DNS setups.</p>
       </div>
     </Section>
     <Section styles={ ['u-isFull'] } id="section_3">
-      <div ariaHidden="true"></div>
+      <BackgroundProximity />
       <div class="u-container Timeline" style={{textAlign: 'center'}}>
         <h2>What I've been up to...</h2>
         <ListTime />

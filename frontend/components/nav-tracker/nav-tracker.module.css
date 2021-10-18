@@ -8,6 +8,7 @@
   align-items: center;
   font-family: var(--type-title);
   min-width: 25px;
+  z-index: 999;
 }
 
 .NT:before,

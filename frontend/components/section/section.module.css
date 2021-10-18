@@ -21,6 +21,7 @@
 
 .Section:global(.u-isFull) > *:last-child {
   position: relative;
+  z-index: 200;
 }
 
 .Section p {
